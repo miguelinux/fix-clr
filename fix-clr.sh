@@ -18,7 +18,7 @@ sudo chmod 700 ${MOUNT_POINT}/var/lib/swupd
 # Get VERSION_ID from
 source ${MOUNT_POINT}/usr/lib/os-release
 
-sudo swupd diagnose --fix --picky --version=${VERSION_ID} --path=${MOUNT_POINT} --statedir ${MOUNT_POINT}/var/lib/swupd
+sudo swupd repair --picky --version=${VERSION_ID} --path=${MOUNT_POINT} --statedir ${MOUNT_POINT}/var/lib/swupd
 
 sudo umount ${MOUNT_POINT}
 sudo rmdir  ${MOUNT_POINT}
